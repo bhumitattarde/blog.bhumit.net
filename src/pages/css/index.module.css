@@ -1,0 +1,15 @@
+.blogList {
+  list-style: none;
+}
+
+.blogListEntry {
+  margin-bottom: 2.5em;
+}
+
+.blogDescription header {
+  margin-bottom: 0.5em;
+}
+
+.blogDescription header > .blogDate {
+  font-style: italic;
+}
