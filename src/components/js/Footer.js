@@ -1,9 +1,12 @@
 import React from "react"
 
+import * as FooterStyle from "../css/Footer.module.css"
+
 const Footer = () => {
   return (
-    <footer>
-      <ul>
+    <footer className={FooterStyle.Footer}>
+      <hr />
+      <ul className={FooterStyle.footerContentList}>
         <li>
           Made with &hearts; by{" "}
           <a href="https://www.bhumit.net">Bhumit Attarde</a>

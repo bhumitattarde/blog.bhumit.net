@@ -1,5 +1,18 @@
 .globalWrapper {
+  /*TODO this won't be necessary when you add a navbar of fixed position  */
+  /* width: 100%; */
+  width: var(--screenWidth);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow-x: hidden;
+}
+
+.contentWrapper {
   width: 100%;
   max-width: 800px;
-  height: 100vh;
+  height: max(100vh, 100%);
+  min-height: 100vh;
 }

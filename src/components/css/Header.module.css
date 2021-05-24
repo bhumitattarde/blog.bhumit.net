@@ -4,3 +4,15 @@
 
 .Header {
 }
+
+/*FIXME Imperfect */
+
+/* .mainPageHeader h1,
+.Header h1 {
+  text-decoration: underline;
+}
+
+.mainPageHeader h1:hover,
+.Header h1:hover {
+  text-decoration-color: var(--linkHoverColor);
+} */
