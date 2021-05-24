@@ -1,10 +1,11 @@
 .articleHeader {
-  margin-bottom: 2em;
-  text-align: center;
+  margin-bottom: 2.5em;
+  text-align: left;
 }
 
 .articleHeader h1 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.1em;
+  text-align: left;
 }
 
 .blogDate {
@@ -22,4 +23,56 @@
   align-content: center;
   font-size: var(--normalFontSize);
   font-style: italic;
+}
+
+/* markdown formatting */
+
+.mdWrapper > * {
+  margin: 1em 0;
+}
+
+.mdWrapper > ul,
+.mdWrapper > ol {
+  margin-left: 1em;
+}
+
+.mdWrapper li {
+  margin: 0.5em 0;
+  list-style: initial;
+  font-size: var(--normalFontSize);
+}
+
+.mdWrapper h1 {
+  text-align: left;
+}
+
+.mdWrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0.25rem;
+}
+
+.mdWrapper table thead tr th {
+  border-bottom: 1px solid var(--color2);
+}
+
+/*TODO Add quote icon before blockquote from FA & remove left border*/
+.mdWrapper blockquote {
+  padding: 0 0 0 1em;
+  border-left: 0.4em solid var(--color3);
+  font-style: italic;
+  color: var(--lightTextColor);
+}
+
+.mdWrapper blockquote > *:not(li) {
+  margin: 1em 0;
+}
+
+.mdWrapper blockquote > ul,
+.mdWrapper blockquote > ol {
+  margin-left: 1em;
+}
+
+.mdWrapper blockquote li {
+  margin: 0.5em 0;
 }

@@ -28,6 +28,7 @@ const BlogPostTmpl = ({ data, location }) => {
         </header>
 
         <section
+          className={BlogPostTmplStyle.mdWrapper}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />

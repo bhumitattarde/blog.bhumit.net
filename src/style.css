@@ -5,11 +5,11 @@
   --color2: #394867;
   --color3: #004a7c;
   --color4: #f1f6f9;
-
   --linkHoverColor: #14ffec;
   --progressIndicatorBadColor: #fcbf1e;
-
   --normalFontSize: clamp(16px, 1vw, 20px);
+
+  --lightTextColor: #cccccc;
 }
 
 /* HTML elements */
