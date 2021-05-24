@@ -1,13 +1,15 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/js/Bio"
-import Layout from "../components/js/Layout"
-import Seo from "../components/js/SEO"
+// import Bio from "../../components/js/Bio"
+import Layout from "../../components/js/Layout"
+import Seo from "../../components/js/SEO"
 
-const BlogPostTemplate = ({ data, location }) => {
+import * as BlogPostTmplStyle from "../css/BlogPostTmpl.module.css"
+
+const BlogPostTmpl = ({ data, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata.title
   const { previous, next } = data
 
   return (
@@ -16,34 +18,23 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
+
+      <article itemScope itemType="http://schema.org/Article">
+        <header className={BlogPostTmplStyle.articleHeader}>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <small className={BlogPostTmplStyle.blogDate}>
+            {post.frontmatter.date}
+          </small>
         </header>
+
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+
+      <nav className={BlogPostTmplStyle.blogNav}>
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -64,7 +55,7 @@ const BlogPostTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default BlogPostTmpl
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

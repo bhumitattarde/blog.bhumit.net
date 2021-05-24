@@ -20,7 +20,9 @@ const Header = ({ title, location }) => {
   } else {
     header = (
       <header className={HeaderStyle.Header}>
-        <Link to="/">{title}</Link>
+        <h2>
+          <Link to="/">{title}</Link>
+        </h2>
       </header>
     )
   }

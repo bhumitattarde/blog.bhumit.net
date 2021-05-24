@@ -8,6 +8,8 @@
 
   --linkHoverColor: #14ffec;
   --progressIndicatorBadColor: #fcbf1e;
+
+  --normalFontSize: clamp(16px, 1vw, 20px);
 }
 
 /* HTML elements */

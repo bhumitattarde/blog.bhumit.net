@@ -1,0 +1,25 @@
+.articleHeader {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.articleHeader h1 {
+  margin-bottom: 0.3em;
+}
+
+.blogDate {
+  font-style: italic;
+}
+
+.blogNav {
+  margin-top: 3em;
+}
+
+.blogNav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  font-size: var(--normalFontSize);
+  font-style: italic;
+}
