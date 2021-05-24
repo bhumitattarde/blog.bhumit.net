@@ -21,7 +21,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  font-size: var(--normalFontSize);
   font-style: italic;
 }
 
@@ -39,7 +38,6 @@
 .mdWrapper li {
   margin: 0.5em 0;
   list-style: initial;
-  font-size: var(--normalFontSize);
 }
 
 .mdWrapper h1 {
