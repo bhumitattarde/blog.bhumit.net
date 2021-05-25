@@ -1,15 +1,15 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/js/Bio"
-import Layout from "../components/js/Layout"
-import Seo from "../components/js/SEO"
+import Bio from "../components/js/Bio";
+import Layout from "../components/js/Layout";
+import Seo from "../components/js/SEO";
 
-import * as BlogIndexStyle from "./css/index.module.css"
+import * as BlogIndexStyle from "./css/index.module.css";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -18,15 +18,15 @@ const BlogIndex = ({ data, location }) => {
         <Bio />
         <p>Nothing to see here yet.. Check back later!</p>
       </Layout>
-    )
+    );
   }
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <ol className={BlogIndexStyle.blogList}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        {posts.map((post) => {
+          const title = post.frontmatter.title || post.fields.slug;
 
           return (
             <li key={post.fields.slug} className={BlogIndexStyle.blogListEntry}>
@@ -45,7 +45,7 @@ const BlogIndex = ({ data, location }) => {
                     {post.frontmatter.date}
                   </small>
                 </header>
-                <section>
+                <section className={BlogIndexStyle.blogExcerpt}>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
@@ -55,14 +55,14 @@ const BlogIndex = ({ data, location }) => {
                 </section>
               </article>
             </li>
-          )
+          );
         })}
       </ol>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -85,4 +85,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

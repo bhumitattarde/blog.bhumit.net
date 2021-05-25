@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import * as FooterStyle from "../css/Footer.module.css"
+import * as FooterStyle from "../css/Footer.module.css";
 
 const Footer = () => {
   return (
@@ -11,10 +11,10 @@ const Footer = () => {
           Made with &hearts; by{" "}
           <a href="https://www.bhumit.net">Bhumit Attarde</a>
         </li>
-        <li>&copy; 2021 Bhumit Attarde</li>
+        <li>&copy; 2021 Bhumit Attarde. All rights reserved.</li>
       </ul>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

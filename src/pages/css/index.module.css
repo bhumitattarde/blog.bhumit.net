@@ -13,3 +13,7 @@
 .blogDescription header > .blogDate {
   font-style: italic;
 }
+
+.blogExcerpt {
+  color: var(--lightTextColor);
+}
