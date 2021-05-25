@@ -24,6 +24,16 @@
   font-style: italic;
 }
 
+@media (max-width: 500px) {
+  .articleHeader {
+    margin-bottom: 1em;
+  }
+
+  .blogNav {
+    margin-top: 2em;
+  }
+}
+
 /* markdown formatting */
 
 .mdWrapper > * {
@@ -73,4 +83,11 @@
 
 .mdWrapper blockquote li {
   margin: 0.5em 0;
+}
+
+@media (max-width: 500px) {
+  .mdWrapper blockquote {
+    padding: 0 0 0 0.5em;
+    border-left: 0.3em solid var(--color3);
+  }
 }

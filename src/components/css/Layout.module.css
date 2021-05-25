@@ -17,3 +17,9 @@
   min-height: 100vh;
   padding-bottom: 4em;
 }
+
+@media (max-width: 500px) {
+  .contentWrapper {
+    padding-bottom: 3em;
+  }
+}

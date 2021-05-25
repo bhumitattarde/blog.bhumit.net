@@ -1,19 +1,28 @@
 .mainPageHeader {
-  margin: 4em 1em;
+  margin: 4em 0;
 }
 
 .Header {
   margin: 2em 0em 3em 0em;
 }
 
-/*FIXME Imperfect */
-
-/* .mainPageHeader h1,
-.Header h1 {
+.mainPageHeader h1,
+.Header h2 {
   text-decoration: underline;
+  text-decoration-color: var(--color4);
 }
 
 .mainPageHeader h1:hover,
-.Header h1:hover {
+.Header h2:hover {
   text-decoration-color: var(--linkHoverColor);
-} */
+}
+
+@media (max-width: 500px) {
+  .mainPageHeader {
+    margin: 2em 0;
+  }
+
+  .Header {
+    margin: 1em 0em 2em 0em;
+  }
+}
