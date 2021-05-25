@@ -68,11 +68,10 @@ const Seo = ({ description, lang, meta, title }) => {
   )
 }
 
-//TODO set default props here
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  description: `Personal blog of Bhumit Attarde.`,
 }
 
 Seo.propTypes = {

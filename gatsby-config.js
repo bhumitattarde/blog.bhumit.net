@@ -3,12 +3,12 @@ module.exports = {
     title: `Bhumit's blog`,
     author: {
       name: `Bhumit Attarde`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Personal blog of Bhumit Attarde`,
+    siteUrl: `https://blog.bhumit.net/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `BhumitAttarde`,
     },
   },
   plugins: [
@@ -27,13 +27,14 @@ module.exports = {
         name: `blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // For images used by site source
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -58,12 +59,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
+    //TODO Add Google analytics {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
     //     trackingId: `ADD YOUR TRACKING ID HERE`,
     //   },
     // },
+    //TODO Add support for RSS feed
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -119,19 +121,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Personal blog of Bhumit Attarde.`,
+        short_name: `Bhumit's blog`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#14274e`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
 }
