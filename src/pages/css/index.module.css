@@ -17,3 +17,7 @@
 .blogExcerpt {
   color: var(--lightTextColor);
 }
+
+.noPostsText {
+  text-align: center;
+}

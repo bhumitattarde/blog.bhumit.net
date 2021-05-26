@@ -17,8 +17,9 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
-        <Bio />
-        <p>Nothing to see here yet.. Check back later!</p>
+        <p className={BlogIndexStyle.noPostsText}>
+          Nothing to see here yet.. Check back later!
+        </p>
       </Layout>
     );
   }
