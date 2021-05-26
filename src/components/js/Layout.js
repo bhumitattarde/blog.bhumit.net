@@ -1,14 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
 
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./Header";
+import Footer from "./Footer";
 
-import * as LayoutStyle from "../css/Layout.module.css"
+import * as LayoutStyle from "../css/Layout.module.css";
 
 class Layout extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
@@ -17,11 +16,11 @@ class Layout extends React.Component {
     document.documentElement.style.setProperty(
       "--screenWidth",
       document.body.clientWidth + "px"
-    )
+    );
   }
 
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children } = this.props;
     return (
       <div className={LayoutStyle.globalWrapper}>
         <div className={LayoutStyle.contentWrapper}>
@@ -30,8 +29,8 @@ class Layout extends React.Component {
         </div>
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;

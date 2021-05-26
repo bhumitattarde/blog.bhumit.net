@@ -1,16 +1,18 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { graphql } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
+import { transitionCoverColor } from "../../config.js";
 // import Bio from "../../components/js/Bio"
-import Layout from "../../components/js/Layout"
-import Seo from "../../components/js/SEO"
+import Layout from "../../components/js/Layout";
+import Seo from "../../components/js/SEO";
 
-import * as BlogPostTmplStyle from "../css/BlogPostTmpl.module.css"
+import * as BlogPostTmplStyle from "../css/BlogPostTmpl.module.css";
 
 const BlogPostTmpl = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = data;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -38,25 +40,37 @@ const BlogPostTmpl = ({ data, location }) => {
         <ul>
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <AniLink
+                cover
+                to={previous.fields.slug}
+                direction="left"
+                bg={transitionCoverColor}
+                rel="prev"
+              >
                 ← {previous.frontmatter.title}
-              </Link>
+              </AniLink>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <AniLink
+                cover
+                to={next.fields.slug}
+                direction="right"
+                bg={transitionCoverColor}
+                rel="next"
+              >
                 {next.frontmatter.title} →
-              </Link>
+              </AniLink>
             )}
           </li>
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTmpl
+export default BlogPostTmpl;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -96,4 +110,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
