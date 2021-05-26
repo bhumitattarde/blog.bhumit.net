@@ -4,8 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/js/Layout";
 import SEO from "../components/js/SEO";
 
-import * as NotFoundPageStyle from "./css/404.module.css";
-
 class NotFoundPage extends React.Component {
   constructor(props) {
     super(props);
