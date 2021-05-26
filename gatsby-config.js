@@ -64,7 +64,6 @@ module.exports = {
     //     trackingId: `ADD YOUR TRACKING ID HERE`,
     //   },
     // },
-    //TODO Add support for RSS feed
     {
       resolve: `gatsby-plugin-feed`,
       options: {
