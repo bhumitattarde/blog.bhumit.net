@@ -20,8 +20,12 @@ module.exports = {
         display: "swap",
       },
     },
-    `gatsby-plugin-image`,
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -58,8 +62,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     //TODO Add Google analytics {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -130,9 +132,6 @@ module.exports = {
         icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
-    // `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // `gatsby-plugin-offline`,
+    //? `gatsby-plugin-offline`,
   ],
 };
