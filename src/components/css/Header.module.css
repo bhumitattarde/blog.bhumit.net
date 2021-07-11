@@ -3,7 +3,12 @@
 }
 
 .Header {
-  margin: 2em 0em 3em 0em;
+  margin: 0em 0 1em 0;
+  font-style: italic;
+}
+
+.Header h2 {
+  font-size: clamp(16px, 1vw, 20px);
 }
 
 .mainPageHeader h1,
@@ -23,6 +28,6 @@
   }
 
   .Header {
-    margin: 1em 0em 2em 0em;
+    margin: 0.5em 0em 1em 0em;
   }
 }

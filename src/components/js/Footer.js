@@ -8,6 +8,7 @@ const Footer = () => {
       <hr />
       <ul className={FooterStyle.footerContentList}>
         <li>
+          {/* TODO change to angular bracks */}
           Made with &hearts; by{" "}
           <a href="https://www.bhumit.net">Bhumit Attarde</a>
         </li>
