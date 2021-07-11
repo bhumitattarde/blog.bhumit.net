@@ -4,7 +4,7 @@ module.exports = {
     title: `Bhumit's blog`,
     author: {
       name: `Bhumit Attarde`,
-      summary: ``,
+      // summary: `Junior engineering student with in`,
     },
     description: `Personal blog of Bhumit Attarde`,
     siteUrl: `https://blog.bhumit.net/`,

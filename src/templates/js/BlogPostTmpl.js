@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { transitionCoverColor } from "../../config.js";
-// import Bio from "../../components/js/Bio"
+import Bio from "../../components/js/Bio";
 import Layout from "../../components/js/Layout";
 import Seo from "../../components/js/SEO";
 
@@ -29,11 +29,13 @@ const BlogPostTmpl = ({ data, location }) => {
           </small>
         </header>
 
-        <section
+        <main
           className={BlogPostTmplStyle.mdWrapper}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+
+        <Bio />
       </article>
 
       <nav className={BlogPostTmplStyle.blogNav}>
