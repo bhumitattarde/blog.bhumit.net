@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  font-size: clamp(14px, 0.8vw, 16px);
 }
 
 .Footer hr {
