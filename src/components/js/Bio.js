@@ -1,5 +1,12 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedinIn,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 import * as BioStyle from "../css/Bio.module.css";
 
@@ -41,26 +48,26 @@ const Bio = () => {
               <a
                 href={`https://www.linkedin.com/${data.site.siteMetadata?.social.linkedin}`}
               >
-                linkedin
+                <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
             </li>
             <li>
               <a
                 href={`https://www.github.com/${data.site.siteMetadata?.social.github}`}
               >
-                github
+                <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
             <li>
               <a href={`mailto:${data.site.siteMetadata?.social.email}`}>
-                mail
+                <FontAwesomeIcon icon={faAt} />
               </a>
             </li>
             <li>
               <a
                 href={`https://www.twitter.com/${data.site.siteMetadata?.social.twitter}`}
               >
-                twitter
+                <FontAwesomeIcon icon={faTwitter} />
               </a>
             </li>
           </ul>
