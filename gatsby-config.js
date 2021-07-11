@@ -10,6 +10,10 @@ module.exports = {
     siteUrl: `https://blog.bhumit.net/`,
     social: {
       twitter: `BhumitAttarde`,
+      website: `https://www.bhumit.net`,
+      linkedin: `in/bhumitattarde`,
+      github: `bhumitattarde`,
+      email: `bhumitattarde2@gmail.com`,
     },
   },
   plugins: [

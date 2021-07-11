@@ -13,6 +13,10 @@ const Bio = () => {
           }
           social {
             twitter
+            website
+            linkedin
+            github
+            email
           }
         }
       }
@@ -27,14 +31,38 @@ const Bio = () => {
       {author?.name && (
         <p>
           <i>
-            Written by <strong>{author.name}</strong>
+            Written by{" "}
+            <strong>
+              <a href={data.site.siteMetadata?.social.website}>{author.name}</a>
+            </strong>
           </i>
           <ul className={BioStyle.contactList}>
-            <li>icon</li>
-            <li>icon</li>
-            <li>icon</li>
-            <li>icon</li>
-            <li>icon</li>
+            <li>
+              <a
+                href={`https://www.linkedin.com/${data.site.siteMetadata?.social.linkedin}`}
+              >
+                linkedin
+              </a>
+            </li>
+            <li>
+              <a
+                href={`https://www.github.com/${data.site.siteMetadata?.social.github}`}
+              >
+                github
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${data.site.siteMetadata?.social.email}`}>
+                mail
+              </a>
+            </li>
+            <li>
+              <a
+                href={`https://www.twitter.com/${data.site.siteMetadata?.social.twitter}`}
+              >
+                twitter
+              </a>
+            </li>
           </ul>
         </p>
       )}
