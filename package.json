@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Bhumit-Attarde-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Personal blog of Bhumit Attarde",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Bhumit Attarde <bhumitattarde2@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/bhumitattarde/blog.bhumit.net/issues"
   },
   "dependencies": {
     "gatsby": "^3.6.0",
@@ -40,15 +40,15 @@
     "gh-pages": "^3.2.0",
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/bhumitattarde/blog.bhumit.net/blob/main/README.md",
   "keywords": [
-    "gatsby"
+    "blog"
   ],
-  "license": "0BSD",
+  "license": "",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "https://github.com/bhumitattarde/blog.bhumit.net.git"
   },
   "scripts": {
     "build": "gatsby build",
