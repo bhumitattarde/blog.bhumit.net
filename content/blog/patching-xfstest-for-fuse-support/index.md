@@ -15,7 +15,7 @@ File systems are one of the most critical parts of an operating system and the r
 
 File systems evolve constantly to complement the ever-changing technological landscape. They add new features, modify existing ones, try to introduce unique concepts making the codebase increasingly complex and sometimes unstable. Which, in turn, leads to a plethora of bugs -- like most software. What makes this problem particularly exasperating when dealing with file systems is the fact that finding and fixing bugs in file systems is very hard, evident from the fact that 50% of the file system bugs take more than a year to be fixed.<sup><a href="https://dl.acm.org/doi/10.1145/2619090">ref</a></sup> This makes thoroughly testing file systems and associated programs a high priority affair. Unfortunately and to no one’s surprise, testing file systems is very hard as well. [Learning from XFSTESTS (N Aota, K Kono)](https://www.jstage.jst.go.jp/article/transinf/E102.D/2/E102.D_2018EDP7006/_article/-char/en) does a very good job of explaining the reasons behind it.
 
-## What is FUSE, KIO-FUSE and XFSTESTS?
+## What are FUSE, KIO-FUSE and XFSTESTS?
 
 ### FUSE
 FUSE stands for 'Filesystem in USErspace'. FUSE let's you create your own file systems without ever having to touch kernel code! Pretty neat, right? It does this by essentially acting as a bridge between your file system logic and kernel operations. A lot of innovative FUSE file systems exist, visit [this WikiPedia link](https://en.wikipedia.org/wiki/Filesystem_in_Userspace#Applications) to see some of the popular ones.
