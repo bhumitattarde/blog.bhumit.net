@@ -1,7 +1,7 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
@@ -11,6 +11,11 @@ const Seo = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            cardImage {
+              path
+              width
+              height
+            }
             social {
               twitter
             }
@@ -18,10 +23,10 @@ const Seo = ({ description, lang, meta, title }) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <Helmet
@@ -48,6 +53,18 @@ const Seo = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: site.siteMetadata?.cardImage?.path,
+        },
+        {
+          property: `og:image:width`,
+          content: site.siteMetadata?.cardImage?.width,
+        },
+        {
+          property: `og:image:height`,
+          content: site.siteMetadata?.cardImage?.height,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -65,20 +82,20 @@ const Seo = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: `Personal blog of Bhumit Attarde.`,
-}
+};
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default Seo
+export default Seo;

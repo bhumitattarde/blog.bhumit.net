@@ -8,6 +8,7 @@ module.exports = {
     },
     description: `Personal blog of Bhumit Attarde`,
     siteUrl: `https://blog.bhumit.net/`,
+    cardImage: { path: `/card-image.png`, width: 1200, height: 630 },
     social: {
       twitter: `BhumitAttarde`,
       website: `https://www.bhumit.net`,
