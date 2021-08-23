@@ -20,7 +20,7 @@ The project not only benefits KIO, KIO-FUSE and KDE, but the FOSS community as a
 
 ### FUSE support for XFSTESTS
   
-Patched XFSTESTS file system regression testing suite for FUSE support. Go through [this blog I wrote](https://blog.bhumit.net/patching-xfstest-for-fuse-support/) to know more. The patch can be found at [github.com/bhumitattarde/XFSTESTS-FUSE-patch](https://github.com/bhumitattarde/XFSTESTS-FUSE-patch) and is under review.
+Patched XFSTESTS file system regression testing suite for FUSE support. Go through [this blog I wrote](https://blog.bhumit.net/patching-xfstest-for-fuse-support/) to know more. The patch can be found at [github.com/bhumitattarde/XFSTESTS-FUSE-patch](https://github.com/bhumitattarde/XFSTESTS-FUSE-patch) and is [under review](https://patchwork.kernel.org/project/fstests/patch/20210812045950.3190-1-bhumit.attarde01@gmail.com/).
 
 ### XFSTESTS support for KIO-FUSE
   
